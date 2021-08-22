@@ -39,6 +39,7 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
+- SASS
 
 ### What I learned
 
@@ -51,9 +52,8 @@ To see how you can add code snippets, see below:
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+$body-font: 'Barlow', sans-serif;
+$header-font: 'Fraunces', serif;
 ```
 
 ```js

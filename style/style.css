@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  font-size: 18px;
+  position: relative;
+}
+
+body header {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+  width: 100%;
+  z-index: 5;
+  font-size: 1rem;
+  font-family: "Barlow", sans-serif;
+}
+
+body header a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+body header a img {
+  height: 2rem;
+}
+
+body header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav ul li {
+  font-family: #23303e;
+  padding-right: 1rem;
+}
+
+body header nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+body header nav ul li button {
+  background-color: white;
+  border-color: transparent;
+  border-radius: 50px;
+  font-family: "Fraunces", serif;
+  font-size: 1rem;
+  color: black;
+  height: 3rem;
+  width: 8rem;
+}
+
+body article {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+}
+
+body article section.intro {
+  background-image: url("../images/desktop/image-header.jpg");
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  min-height: 100vh;
+  background-size: cover;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body article section.intro h1 {
+  color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body article section.img-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+}
+
+body article section.testimonials {
+  width: 100%;
+}
+
+body article section.testimonials h4 {
+  text-align: center;
+  font-family: "Fraunces", serif;
+}
+
+body article section.testimonials .client-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+body article section.testimonials .client-list .client {
+  text-align: center;
+  max-width: 22rem;
+  margin: auto;
+}
+
+body article section.testimonials .client-list .client img.client-profile {
+  border-radius: 50%;
+  size: 2rem;
+}
+
+body article section.testimonials .client-list .client p {
+  font-family: "Barlow", sans-serif;
+}
+
+body article section.testimonials .client-list .client h4 {
+  font-family: "Fraunces", serif;
+}
+
+body article section.testimonials .client-list .client h6 {
+  font-family: "Barlow", sans-serif;
+}
+/*# sourceMappingURL=style.css.map */
