@@ -97,20 +97,38 @@ body article section.intro {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  min-height: 100vh;
+  min-height: 80vh;
   background-size: cover;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
 
 body article section.intro h1 {
   color: white;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: "Fraunces", serif;
+  font-size: 3rem;
+  align-self: center;
+}
+
+body article section.intro img {
+  height: 7rem;
+  width: 2rem;
+  margin: 3rem;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -121,17 +139,69 @@ body article section.img-grid {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: (1fr)[6];
-      grid-template-rows: repeat(6, 1fr);
+  -ms-grid-rows: 400px 400px 400px;
+      grid-template-rows: 400px 400px 400px;
+      grid-template-areas: "transform transform" "audience audience" "gd photography";
+  justify-items: center;
+}
+
+body article section.img-grid .item h3 {
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  color: black;
+}
+
+body article section.img-grid .item p {
+  font-family: "Barlow", sans-serif;
+  color: #25564b;
+}
+
+body article section.img-grid .item .img1 {
+  background-image: url("/images/desktop/image-transform.jpg");
+  background-size: cover;
+  color: #19536b;
+}
+
+body article section.img-grid .item .transform {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: transform;
+  display: -ms-grid;
+  display: grid;
+}
+
+body article section.img-grid .item .audience {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: audience;
+}
+
+body article section.img-grid .item .img3 {
+  background-image: url("/images/desktop/image-graphic-design.jpg");
+  background-size: cover;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: gd;
+}
+
+body article section.img-grid .item .img4 {
+  background-image: url("/images/desktop/image-photography.jpg");
+  background-size: cover;
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: photography;
 }
 
 body article section.testimonials {
   width: 100%;
 }
 
-body article section.testimonials h4 {
+body article section.testimonials h4.testimonial-title {
   text-align: center;
   font-family: "Fraunces", serif;
+  color: #a7abae;
 }
 
 body article section.testimonials .client-list {
@@ -162,5 +232,65 @@ body article section.testimonials .client-list .client h4 {
 
 body article section.testimonials .client-list .client h6 {
   font-family: "Barlow", sans-serif;
+  color: #a7abae;
+}
+
+body footer {
+  width: 100%;
+  background-color: #a7abae;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+}
+
+body footer .footer-images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+body footer .footer-images img {
+  max-width: 25vw;
+}
+
+body footer .footer-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  list-style: none;
+  font-family: "Barlow", sans-serif;
+}
+
+body footer .footer-nav li {
+  text-align: center;
+  text-decoration: none;
+}
+
+body footer .footer-nav li a {
+  text-decoration: none;
+  color: #458c7e;
+}
+
+body footer .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  justify-items: center;
 }
 /*# sourceMappingURL=style.css.map */
