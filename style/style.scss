@@ -71,8 +71,9 @@ body{
         section.intro{
             background-image: url('../images/desktop/image-header.jpg');
             height: max-content;
-            min-height: 80vh;
+            min-height: 90vh;
             background-size: cover;
+            background-position: center;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -96,48 +97,62 @@ body{
         section.img-grid{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 400px 400px 400px;
+            grid-template-rows: 500px 500px 500px;
             grid-template-areas: 
                 "transform transform"
                 "audience audience"
                 "gd photography";
             justify-items: center;
             .item{
-                h3{
-                    font-family: $header-font;
-                    font-size: 2rem;
-                    color: black;
+                .text-square{
+                    width: 50vw;
+                    text-align: center;
+                    h3{
+                        font-family: $header-font;
+                        font-size: 2rem;
+                        color: black;
+                    }
+                    p{
+                        font-family: $body-font;
+                        color: $gd-text;
+                    }
                 }
-                p{
-                    font-family: $body-font;
-                    color: $gd-text;
-                }
-                .img1{
-                    background-image: url('/images/desktop/image-transform.jpg');
-                    background-size: cover;
-                    color: hsl(198, 62%, 26%);
-                }
-                .transform{
-                    grid-area: transform;
-                    display: grid;
-                }
-                .audience{
-                    grid-area: audience;
-                }
-                .img3{
-                    background-image: url('/images/desktop/image-graphic-design.jpg');
-                    background-size: cover;
-                    grid-area: gd;
-                }
-                .img4{
-                    background-image: url('/images/desktop/image-photography.jpg');
-                    background-size: cover;
-                    grid-area: photography;
-                }
+                // .img1{
+                //     background-image: url('/images/desktop/image-transform.jpg');
+                //     background-size: cover;
+                //     color: hsl(198, 62%, 26%);
+                // }
+            }
+            .transform{
+                grid-area: transform;
+                display: flex;
+                width: 100%;
+            }
+            .audience{
+                grid-area: audience;
+                display: flex;
+                flex-direction: row-reverse;
+                width: 100%;
+            }
+            .img3{
+                background-image: url('/images/desktop/image-graphic-design.jpg');
+                background-size: cover;
+                background-position: top;
+                grid-area: gd;
+                text-align: center;
+            }
+            .img4{
+                background-image: url('/images/desktop/image-photography.jpg');
+                background-size: cover;
+                background-position: top;
+                grid-area: photography;
+                text-align: center;
             }
         }
         section.testimonials{
             width: 100%;
+            min-height: 80vh;
+            align-content: center;
             h4.testimonial-title{
                 text-align: center;
                 font-family: $header-font;
@@ -170,7 +185,9 @@ body{
     }
     footer{
         width: 100%;
+        height: 75vh;
         background-color: hsl(210, 4%, 67%);
+        text-align: center;
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -185,6 +202,7 @@ body{
             display: flex;
             flex-direction: row;
             justify-items: center;
+            margin: auto;
             list-style: none;
             font-family: $body-font;
             li{
@@ -199,6 +217,7 @@ body{
         .social-icons{
             display: flex;
             flex-direction: row;
+            margin: auto;
             list-style: none;
             justify-items: center;
         }

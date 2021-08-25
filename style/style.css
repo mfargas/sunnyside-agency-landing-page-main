@@ -97,8 +97,9 @@ body article section.intro {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  min-height: 80vh;
+  min-height: 90vh;
   background-size: cover;
+  background-position: center;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,63 +140,79 @@ body article section.img-grid {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 400px 400px 400px;
-      grid-template-rows: 400px 400px 400px;
+  -ms-grid-rows: 500px 500px 500px;
+      grid-template-rows: 500px 500px 500px;
       grid-template-areas: "transform transform" "audience audience" "gd photography";
   justify-items: center;
 }
 
-body article section.img-grid .item h3 {
+body article section.img-grid .item .text-square {
+  width: 50vw;
+  text-align: center;
+}
+
+body article section.img-grid .item .text-square h3 {
   font-family: "Fraunces", serif;
   font-size: 2rem;
   color: black;
 }
 
-body article section.img-grid .item p {
+body article section.img-grid .item .text-square p {
   font-family: "Barlow", sans-serif;
   color: #25564b;
 }
 
-body article section.img-grid .item .img1 {
-  background-image: url("/images/desktop/image-transform.jpg");
-  background-size: cover;
-  color: #19536b;
-}
-
-body article section.img-grid .item .transform {
+body article section.img-grid .transform {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: transform;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
 }
 
-body article section.img-grid .item .audience {
+body article section.img-grid .audience {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: audience;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  width: 100%;
 }
 
-body article section.img-grid .item .img3 {
+body article section.img-grid .img3 {
   background-image: url("/images/desktop/image-graphic-design.jpg");
   background-size: cover;
+  background-position: top;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: gd;
+  text-align: center;
 }
 
-body article section.img-grid .item .img4 {
+body article section.img-grid .img4 {
   background-image: url("/images/desktop/image-photography.jpg");
   background-size: cover;
+  background-position: top;
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: photography;
+  text-align: center;
 }
 
 body article section.testimonials {
   width: 100%;
+  min-height: 80vh;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 body article section.testimonials h4.testimonial-title {
@@ -237,7 +254,9 @@ body article section.testimonials .client-list .client h6 {
 
 body footer {
   width: 100%;
+  height: 75vh;
   background-color: #a7abae;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,6 +287,7 @@ body footer .footer-nav {
       -ms-flex-direction: row;
           flex-direction: row;
   justify-items: center;
+  margin: auto;
   list-style: none;
   font-family: "Barlow", sans-serif;
 }
@@ -290,6 +310,7 @@ body footer .social-icons {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: auto;
   list-style: none;
   justify-items: center;
 }
