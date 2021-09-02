@@ -10,6 +10,7 @@ body {
   width: 100vw;
   font-size: 18px;
   position: relative;
+  color: #23303e;
 }
 
 body header {
@@ -148,6 +149,9 @@ body article section.img-grid {
 
 body article section.img-grid .item .text-square {
   width: 50vw;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   text-align: center;
 }
 
@@ -155,11 +159,37 @@ body article section.img-grid .item .text-square h3 {
   font-family: "Fraunces", serif;
   font-size: 2rem;
   color: black;
+  margin: auto;
 }
 
 body article section.img-grid .item .text-square p {
   font-family: "Barlow", sans-serif;
   color: #25564b;
+  margin: auto;
+  width: 28rem;
+  text-align: left;
+}
+
+body article section.img-grid .item .img-square {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body article section.img-grid .item .img-square .transform-img {
+  background-size: cover;
+  color: #19536b;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body article section.img-grid .item .img-square .stand-out-img {
+  background-size: cover;
+  color: #19536b;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 body article section.img-grid .transform {
@@ -171,6 +201,7 @@ body article section.img-grid .transform {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  overflow: hidden;
 }
 
 body article section.img-grid .audience {
@@ -186,6 +217,7 @@ body article section.img-grid .audience {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   width: 100%;
+  overflow: hidden;
 }
 
 body article section.img-grid .img3 {
@@ -211,14 +243,23 @@ body article section.img-grid .img4 {
 body article section.testimonials {
   width: 100%;
   min-height: 80vh;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body article section.testimonials h4.testimonial-title {
   text-align: center;
   font-family: "Fraunces", serif;
   color: #a7abae;
+  margin: auto auto 2rem auto;
 }
 
 body article section.testimonials .client-list {
@@ -226,6 +267,10 @@ body article section.testimonials .client-list {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto auto auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body article section.testimonials .client-list .client {
@@ -236,11 +281,13 @@ body article section.testimonials .client-list .client {
 
 body article section.testimonials .client-list .client img.client-profile {
   border-radius: 50%;
-  size: 2rem;
+  width: 5rem;
+  margin: 2rem;
 }
 
 body article section.testimonials .client-list .client p {
   font-family: "Barlow", sans-serif;
+  margin: 1rem;
 }
 
 body article section.testimonials .client-list .client h4 {
@@ -278,6 +325,16 @@ body footer .footer-images img {
   max-width: 25vw;
 }
 
+body footer .logo-footer {
+  margin-top: 4rem;
+  color: #458c7e;
+}
+
+body footer .logo-footer img {
+  height: 2rem;
+  color-fill: #458c7e;
+}
+
 body footer .footer-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -286,15 +343,18 @@ body footer .footer-nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  justify-items: center;
-  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   list-style: none;
   font-family: "Barlow", sans-serif;
+  color: #458c7e;
 }
 
 body footer .footer-nav li {
   text-align: center;
   text-decoration: none;
+  margin: 2rem;
 }
 
 body footer .footer-nav li a {
@@ -310,8 +370,13 @@ body footer .social-icons {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: auto;
   list-style: none;
-  justify-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer .social-icons li {
+  margin: 1rem;
 }
 /*# sourceMappingURL=style.css.map */
