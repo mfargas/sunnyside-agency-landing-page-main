@@ -51,7 +51,11 @@ body header nav {
           flex-direction: row;
 }
 
-body header nav ul {
+body header nav .burger {
+  display: none;
+}
+
+body header nav .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,17 +69,17 @@ body header nav ul {
           align-items: center;
 }
 
-body header nav ul li {
+body header nav .menu li {
   font-family: #23303e;
   padding-right: 1rem;
 }
 
-body header nav ul li a {
+body header nav .menu li a {
   text-decoration: none;
   color: white;
 }
 
-body header nav ul li button {
+body header nav .menu li button {
   background-color: white;
   border-color: transparent;
   border-radius: 50px;
@@ -141,8 +145,8 @@ body article section.img-grid {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 500px 500px 500px;
-      grid-template-rows: 500px 500px 500px;
+  -ms-grid-rows: 550px 550px 550px;
+      grid-template-rows: 550px 550px 550px;
       grid-template-areas: "transform transform" "audience audience" "gd photography";
   justify-items: center;
 }
@@ -152,28 +156,35 @@ body article section.img-grid .item .text-square {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  text-align: center;
+  text-align: left;
 }
 
 body article section.img-grid .item .text-square h3 {
   font-family: "Fraunces", serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: black;
   margin: auto;
+  width: 28rem;
 }
 
 body article section.img-grid .item .text-square p {
   font-family: "Barlow", sans-serif;
-  color: #25564b;
-  margin: auto;
+  color: #a7abae;
+  margin: 2rem auto;
   width: 28rem;
   text-align: left;
+}
+
+body article section.img-grid .item .text-square a {
+  width: 29rem;
 }
 
 body article section.img-grid .item .img-square {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  width: 50vw;
+  overflow: hidden;
 }
 
 body article section.img-grid .item .img-square .transform-img {
@@ -190,6 +201,10 @@ body article section.img-grid .item .img-square .stand-out-img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+body article section.img-grid .item .img-square .stand-out-img img {
+  zoom: 110%;
 }
 
 body article section.img-grid .transform {
@@ -301,7 +316,6 @@ body article section.testimonials .client-list .client h6 {
 
 body footer {
   width: 100%;
-  height: 75vh;
   background-color: #a7abae;
   text-align: center;
   display: -webkit-box;
@@ -332,7 +346,6 @@ body footer .logo-footer {
 
 body footer .logo-footer img {
   height: 2rem;
-  color-fill: #458c7e;
 }
 
 body footer .footer-nav {
@@ -378,5 +391,48 @@ body footer .social-icons {
 
 body footer .social-icons li {
   margin: 1rem;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 425px) and (-webkit-min-device-pixel-ratio: 2) {
+  body header nav .burger {
+    display: block;
+  }
+  body header nav .menu {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body article {
+    width: 100vw;
+  }
+  body article section.intro {
+    width: 100%;
+  }
+  body article section.img-grid {
+    width: 100%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1100px 1100px 550px 550px;
+        grid-template-rows: 1100px 1100px 550px 550px;
+        grid-template-areas: "transform" "audience" "gd" "photography";
+  }
+  body article section.img-grid .transform {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body article section.img-grid .audience {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body article section.testimonials .client-list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=style.css.map */
