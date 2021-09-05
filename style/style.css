@@ -393,7 +393,7 @@ body footer .social-icons li {
   margin: 1rem;
 }
 
-@media only screen and (min-width: 300px) and (max-width: 425px) and (-webkit-min-device-pixel-ratio: 2) {
+@media (min-width: 300px) and (max-width: 425px) and (-webkit-min-device-pixel-ratio: 2) {
   body header nav .burger {
     display: block;
   }
@@ -418,6 +418,30 @@ body footer .social-icons li {
         grid-template-rows: 1100px 1100px 550px 550px;
         grid-template-areas: "transform" "audience" "gd" "photography";
   }
+  body article section.img-grid .item {
+    width: 100vw;
+    margin: 0;
+  }
+  body article section.img-grid .item .text-square {
+    width: 100%;
+    text-align: center;
+    margin: auto;
+  }
+  body article section.img-grid .item .text-square h3 {
+    max-width: 24rem;
+  }
+  body article section.img-grid .item .text-square p {
+    max-width: 22rem;
+    text-align: center;
+  }
+  body article section.img-grid .item .img-square {
+    width: 100%;
+    height: 50%;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   body article section.img-grid .transform {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -430,9 +454,24 @@ body footer .social-icons li {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  body article section.testimonials {
+    margin: 5rem auto;
+  }
   body article section.testimonials .client-list {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  body footer .footer-images {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  body footer .footer-images img {
+    max-width: 50vw;
+  }
+  body footer .social-icons {
+    margin: 4rem auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -275,8 +275,7 @@ body{
 
 // **** MOBILE MEDIA QUERY ****
 
-@media only screen 
-    and (min-width: 300px) 
+@media (min-width: 300px) 
     and (max-width: 425px)
     and (-webkit-min-device-pixel-ratio: 2) {
 
@@ -306,6 +305,28 @@ body{
                     "audience"
                     "gd"
                     "photography";
+                .item{
+                    width: 100vw;
+                    margin: 0;
+                    .text-square{
+                        width: 100%;
+                        text-align: center;
+                        margin: auto;
+                        h3{
+                            max-width: 24rem;
+                        }
+                        p{
+                            max-width: 22rem;
+                            text-align: center;
+                        }
+                    }
+                    .img-square{
+                        width: 100%;
+                        height: 50%;
+                        margin: auto;
+                        justify-content: center;
+                    }
+                }
                 .transform{
                     flex-direction: column;
                 }
@@ -314,9 +335,22 @@ body{
                 }
             }
             section.testimonials{
+                margin: 5rem auto;
                 .client-list{
                     grid-template-columns: 1fr;
                 }
+            }
+        }
+        footer{
+            .footer-images{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                img{
+                    max-width: 50vw;
+                }
+            }
+            .social-icons{
+                margin: 4rem auto;
             }
         }
     }
