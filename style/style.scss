@@ -88,12 +88,13 @@ body{
             margin: auto;
             justify-content: center;
             align-content: space-between;
-            h1{
+            .intro-text{
                 color: $white;
                 align-self: center;
                 font-family: $header-font;
                 font-size: 3rem;
                 align-self: center;
+                letter-spacing: 0.5rem;
             }
             img{
                 height: 7rem;
@@ -117,6 +118,8 @@ body{
                     width: 50vw;
                     align-self: center;
                     text-align: left;
+                    display: flex;
+                    flex-direction: column;
                     h3{
                         font-family: $header-font;
                         font-size: 2.5rem;
@@ -131,8 +134,12 @@ body{
                         width: 28rem;
                         text-align: left;
                     }
-                    a{
-                        width: 29rem;
+                    .item-Link{
+                        width: max-content;
+                        text-decoration: none;
+                        color: chartreuse;
+                        justify-self: center;
+                        font-weight: 600;
                     }
                 }
                 .img-square{
@@ -173,6 +180,9 @@ body{
                 background-position: top;
                 grid-area: gd;
                 text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
             .img4{
                 background-image: url('/images/desktop/image-photography.jpg');
@@ -180,6 +190,9 @@ body{
                 background-position: top;
                 grid-area: photography;
                 text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
         }
         section.testimonials{

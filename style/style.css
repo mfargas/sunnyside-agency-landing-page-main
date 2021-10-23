@@ -121,7 +121,7 @@ body article section.intro {
       align-content: space-between;
 }
 
-body article section.intro h1 {
+body article section.intro .intro-text {
   color: white;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -129,6 +129,7 @@ body article section.intro h1 {
   font-family: "Fraunces", serif;
   font-size: 3rem;
   align-self: center;
+  letter-spacing: 0.5rem;
 }
 
 body article section.intro img {
@@ -154,9 +155,15 @@ body article section.img-grid {
 body article section.img-grid .item .text-square {
   width: 50vw;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body article section.img-grid .item .text-square h3 {
@@ -175,8 +182,15 @@ body article section.img-grid .item .text-square p {
   text-align: left;
 }
 
-body article section.img-grid .item .text-square a {
-  width: 29rem;
+body article section.img-grid .item .text-square .item-Link {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-decoration: none;
+  color: chartreuse;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  font-weight: 600;
 }
 
 body article section.img-grid .item .img-square {
@@ -243,6 +257,16 @@ body article section.img-grid .img3 {
   -ms-grid-column: 1;
   grid-area: gd;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body article section.img-grid .img4 {
@@ -253,6 +277,16 @@ body article section.img-grid .img4 {
   -ms-grid-column: 2;
   grid-area: photography;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body article section.testimonials {
