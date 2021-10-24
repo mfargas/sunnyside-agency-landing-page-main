@@ -250,6 +250,7 @@ body article section.img-grid .audience {
 }
 
 body article section.img-grid .img3 {
+  width: 100%;
   background-image: url("/images/desktop/image-graphic-design.jpg");
   background-size: cover;
   background-position: top;
@@ -264,12 +265,22 @@ body article section.img-grid .img3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body article section.img-grid .img3 p {
+  line-height: 1.5rem;
+  font-family: "Barlow", sans-serif;
+  max-width: 23rem;
 }
 
 body article section.img-grid .img4 {
+  width: 100%;
   background-image: url("/images/desktop/image-photography.jpg");
   background-size: cover;
   background-position: top;
@@ -284,9 +295,18 @@ body article section.img-grid .img4 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body article section.img-grid .img4 p {
+  font-family: "Barlow", sans-serif;
+  line-height: 1.5rem;
+  max-width: 23rem;
 }
 
 body article section.testimonials {
@@ -350,7 +370,7 @@ body article section.testimonials .client-list .client h6 {
 
 body footer {
   width: 100%;
-  background-color: #a7abae;
+  background-color: #8fd6c9;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -428,6 +448,9 @@ body footer .social-icons li {
 }
 
 @media (min-width: 300px) and (max-width: 425px) and (-webkit-min-device-pixel-ratio: 2) {
+  body header nav {
+    display: block;
+  }
   body header nav .burger {
     display: block;
   }
@@ -437,6 +460,24 @@ body footer .social-icons li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  body header nav .mobile-mode {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: white;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  body header nav .mobile-mode li a {
+    color: #458c7e;
+  }
+  body header nav .mobile-mode li button {
+    background-color: #fad400;
   }
   body article {
     width: 100vw;

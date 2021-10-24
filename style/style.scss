@@ -6,6 +6,7 @@ $grey-blue: hsl(210, 4%, 67%);
 $dark-grey-blue: hsl(232, 10%, 55%);
 $darker-grey: hsl(213, 9%, 39%);
 $gd-text: hsl(167, 40%, 24%);
+$footer-bg: hsl(169, 46%, 70%);
 $footer-txt: hsl(168, 34%, 41%);
 $photography-text: hsl(198, 62%, 26%);
 $body-text:  hsl(212, 27%, 19%);
@@ -175,6 +176,7 @@ body{
                 overflow: hidden;
             }
             .img3{
+                width: 100%;
                 background-image: url('/images/desktop/image-graphic-design.jpg');
                 background-size: cover;
                 background-position: top;
@@ -182,9 +184,16 @@ body{
                 text-align: center;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: end;
+                align-items: center;
+                p{
+                    line-height: 1.5rem;
+                    font-family: $body-font;
+                    max-width: 23rem;
+                }
             }
             .img4{
+                width: 100%;
                 background-image: url('/images/desktop/image-photography.jpg');
                 background-size: cover;
                 background-position: top;
@@ -192,7 +201,13 @@ body{
                 text-align: center;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: end;
+                align-items: center;
+                p{
+                    font-family: $body-font;
+                    line-height: 1.5rem;
+                    max-width: 23rem;
+                }
             }
         }
         section.testimonials{
@@ -238,7 +253,7 @@ body{
     }
     footer{
         width: 100%;
-        background-color: $grey-blue;
+        background-color: $footer-bg;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -295,12 +310,27 @@ body{
     body{
         header{
             nav{
+                display: block;
                 .burger{
                     display: block;
                 }
                 .menu{
                     display: none;
                     flex-direction: column;
+                }
+                .mobile-mode{
+                    display: flex;
+                    flex-direction: column;
+                    background: white;
+                    align-self: center;
+                    li{
+                        a{
+                            color: $footer-txt;
+                        }
+                        button{
+                            background-color: $yellow;
+                        }
+                    }
                 }
             }
         }
