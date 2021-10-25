@@ -18,9 +18,9 @@ body header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -31,13 +31,16 @@ body header {
   font-family: "Barlow", sans-serif;
 }
 
-body header a {
+body header .nav-logo {
+  position: fixed;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  left: 2rem;
+  top: 2rem;
 }
 
-body header a img {
+body header .nav-logo img {
   height: 2rem;
 }
 
@@ -187,9 +190,10 @@ body article section.img-grid .item .text-square .item-Link {
   width: -moz-max-content;
   width: max-content;
   text-decoration: none;
-  color: chartreuse;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  color: #67b618;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   font-weight: 600;
 }
 
@@ -442,11 +446,17 @@ body footer .social-icons li {
 }
 
 @media (min-width: 300px) and (max-width: 425px) and (-webkit-min-device-pixel-ratio: 2) {
+  body header .nav-logo {
+    left: 1rem;
+  }
   body header nav {
+    width: 100%;
     display: block;
   }
   body header nav .burger {
     display: block;
+    position: absolute;
+    right: 1rem;
   }
   body header nav .menu {
     display: none;
@@ -463,9 +473,23 @@ body footer .social-icons li {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    position: absolute;
+    height: 30vh;
+    width: 100%;
+    top: 5rem;
+    left: 1rem;
+    color: #a7abae;
     background: white;
     -ms-flex-item-align: center;
         align-self: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    font-family: #19536b;
+    font-weight: 600;
+  }
+  body header nav .mobile-mode li {
+    padding: 0;
   }
   body header nav .mobile-mode li a {
     color: #458c7e;
@@ -537,22 +561,24 @@ body footer .social-icons li {
             flex-direction: column;
   }
   body article section.img-grid .img3 {
-    background-size: auto;
+    background-size: cover;
+    background-image: url("../images/mobile/image-graphic-design.jpg");
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
   }
   body article section.img-grid .img3 p {
-    margin: 3rem auto;
+    margin: 2rem auto;
   }
   body article section.img-grid .img4 {
-    background-size: auto;
+    background-size: cover;
+    background-image: url("../images/mobile/image-photography.jpg");
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
   }
   body article section.img-grid .img4 p {
-    margin: 3rem auto;
+    margin: 2rem auto;
   }
   body article section.testimonials {
     margin: 5rem auto;

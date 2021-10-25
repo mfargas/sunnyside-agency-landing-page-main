@@ -29,15 +29,18 @@ body{
     header{
         position: fixed;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         padding: 2rem;
         width: 100%;
         z-index: 5;
         font-size: 1rem;
         font-family: $body-font;
-        a{
+        .nav-logo{
+            position: fixed;
             width: max-content;
+            left: 2rem;
+            top: 2rem;
             img{
                 height: 2rem;
             }
@@ -138,8 +141,8 @@ body{
                     .item-Link{
                         width: max-content;
                         text-decoration: none;
-                        color: chartreuse;
-                        justify-self: center;
+                        color: rgb(103, 182, 24);
+                        align-self: center;
                         font-weight: 600;
                     }
                 }
@@ -308,10 +311,16 @@ body{
 
     body{
         header{
+            .nav-logo{
+                left: 1rem;
+            }
             nav{
+                width: 100%;
                 display: block;
                 .burger{
                     display: block;
+                    position: absolute;
+                    right: 1rem;
                 }
                 .menu{
                     display: none;
@@ -320,9 +329,19 @@ body{
                 .mobile-mode{
                     display: flex;
                     flex-direction: column;
+                    position: absolute;
+                    height: 30vh;
+                    width: 100%;
+                    top: 5rem;
+                    left: 1rem;
+                    color: $grey-blue;
                     background: white;
                     align-self: center;
+                    justify-content: space-evenly;
+                    font-family: $photography-text;
+                    font-weight: 600;
                     li{
+                        padding: 0;
                         a{
                             color: $footer-txt;
                         }
@@ -387,17 +406,19 @@ body{
                     flex-direction: column;
                 }
                 .img3{
-                    background-size: auto;
+                    background-size: cover;
+                    background-image: url('../images/mobile/image-graphic-design.jpg');
                     justify-content: end;
                     p{
-                        margin: 3rem auto;
+                        margin: 2rem auto;
                     }
                 }
                 .img4{
-                    background-size: auto;
+                    background-size: cover;
+                    background-image: url('../images/mobile/image-photography.jpg');
                     justify-content: end;
                     p{
-                        margin: 3rem auto;
+                        margin: 2rem auto;
                     }
                 }
             }
