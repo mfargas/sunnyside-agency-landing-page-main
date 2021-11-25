@@ -18,6 +18,7 @@ This is a solution to the [Sunnyside agency landing page challenge on Frontend M
 
 
 ## Overview
+Project created with CSS and SASS extension for cascading syntactical sugar. This particular website incorporates the picture HTML element to deliver different image sizes depending on necessity. 
 
 ### The challenge
 
@@ -32,6 +33,11 @@ Users should be able to:
 - Live Site URL: [Add live site URL here](https://my-live-site-url.com)
 
 ## My process
+I started building the basic components to the site at first. Incorporating the necessary Grid and Flexbox areas, especially for the center chunk of the content as it contains a layout primarily made up of images.
+
+With the skeleton of the website laid out, I focused on the navigation and footer components next. Using a mobile-first approach on the menu, I wanted to incorporate the hamburger menu functionality early on.
+
+
 
 ### Built with
 

@@ -208,13 +208,15 @@ body article section.img-grid .item .img-square {
 }
 
 body article section.img-grid .item .transform-img {
-  background-size: cover;
   background-image: url("../images/desktop/image-transform.jpg");
+  background-size: cover;
+  height: 100%;
 }
 
 body article section.img-grid .item .stand-out-img {
   background-image: url("../images/desktop/image-stand-out.jpg");
   background-size: cover;
+  height: 100%;
 }
 
 body article section.img-grid .transform {

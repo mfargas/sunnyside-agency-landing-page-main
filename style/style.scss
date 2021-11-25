@@ -154,12 +154,14 @@ body{
                     align-self: center;
                 }
                 .transform-img{
-                    background-size: cover;
                     background-image: url('../images/desktop/image-transform.jpg');
+                    background-size: cover;
+                    height: 100%;
                 }
                 .stand-out-img{
                     background-image: url('../images/desktop/image-stand-out.jpg');
                     background-size: cover;
+                    height: 100%;
                 }
             }
             .transform{
